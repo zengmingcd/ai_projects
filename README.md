@@ -1,2 +1,3 @@
-# azure_ai
-Azure AI Course by Louis
+# AI projects
+## AI projects created by Lawrence Zeng.
+
