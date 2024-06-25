@@ -4,6 +4,8 @@ import numpy as np
 import time
 import random
 
+st.title("My First Streamlit APP!")
+
 df = pd.DataFrame({
     'first column':[1,2,3,4],
     'second column':[10,20,30,40]
@@ -111,17 +113,27 @@ with right_col:
     )
     st.write(f"You are in {chosen} house!")
 
-# progress
-'Starting a long computation...'
+# # progress
+# 'Starting a long computation...'
 
-# add a placeholder
-latest_iteration = st.empty()
-bar = st.progress(0)
+# # add a placeholder
+# latest_iteration = st.empty()
+# bar = st.progress(0)
 
-for i in range(100):
-    # Update the progress bar with each iteration.
-    latest_iteration.text(f"Iteration {i+1}")
-    bar.progress(i+1)
-    time.sleep(random.randint(0,3))
+# for i in range(100):
+#     # Update the progress bar with each iteration.
+#     latest_iteration.text(f"Iteration {i+1}")
+#     bar.progress(i+1)
+#     time.sleep(random.randint(0,3))
 
-'... and now we\' are done!'
+# '... and now we\' are done!'
+
+
+@st.cache_data
+def cacheDemo(content):
+    st.write("Demo of cache")
+    st.write("Param is ", random.randint(0,10))
+
+cacheDemo(1)
+cacheDemo(1)
+cacheDemo(random.randint(0,10))
